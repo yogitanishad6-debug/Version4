@@ -1,0 +1,263 @@
+/* Sky Blue Edition — Student Friendly */
+
+:root {
+  --white: #ffffff;
+  --sky: #3A8DFF;
+  --mint: #2EC4B6;
+  --navy: #06283D;
+  --slate: #5A6978;
+  --border: #E7EEF5;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* GLOBAL */
+body {
+  margin: 0;
+  background: var(--white);
+  font-family: Inter, sans-serif;
+  color: var(--navy);
+}
+
+/* HEADER */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  background: var(--sky);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+h1 {
+  margin: 0;
+  color: var(--navy);
+}
+
+.tag {
+  font-size: 13px;
+  color: var(--slate);
+}
+
+/* CARDS */
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+
+/* INPUTS */
+label {
+  display: block;
+  font-size: 14px;
+  margin: 8px 0 4px;
+  color: var(--slate);
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* AVATARS */
+.avatar-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #F0F6FF;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sky);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.avatar.selected {
+  border-color: var(--sky);
+  background: #E8F1FF;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+}
+
+.btn.primary {
+  background: var(--sky);
+  color: white;
+}
+
+.btn.secondary {
+  background: var(--mint);
+  color: white;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--slate);
+}
+
+/* CHOICES */
+.choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.choice {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  color: var(--navy);
+  background: #F9FBFF;
+}
+
+.choice.active {
+  background: var(--sky);
+  color: white;
+  border-color: var(--sky);
+}
+
+/* LAYOUT */
+.grid {
+  display: grid;
+  grid-template-columns: 260px 1fr 300px;
+  gap: 14px;
+}
+
+.avatarLarge {
+  width: 70px;
+  height: 70px;
+  background: var(--sky);
+  border-radius: 12px;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.skillsGrid, .badgesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skillItem {
+  background: #F5F9FF;
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 10px;
+  flex: 1 1 calc(50% - 10px);
+}
+
+.skillBar {
+  height: 8px;
+  background: #DCEAFF;
+  border-radius: 20px;
+  margin-top: 6px;
+}
+
+.skillFill {
+  height: 100%;
+  background: var(--sky);
+  border-radius: 20px;
+  width: 0%;
+  transition: width .6s ease;
+}
+
+/* CITY */
+.city {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+}
+
+.building {
+  width: 100px;
+  height: 80px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  background: #F4F8FF;
+}
+
+.building.active {
+  border-color: var(--sky);
+  background: #EAF3FF;
+}
+
+/* READINESS */
+.fitScore {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--sky);
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalCard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 650px;
+  box-shadow: var(--shadow);
+}
+
+.close {
+  float: right;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
