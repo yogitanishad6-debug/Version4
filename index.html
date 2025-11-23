@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CareerSim — Sky Blue Edition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div>
+          <h1>CareerSim</h1>
+          <div class="tag">Explore careers • Build skills • Find your path</div>
+        </div>
+      </div>
+      <div id="userTag" class="userTag">Not signed in</div>
+    </header>
+
+    <!-- ONBOARD -->
+    <section id="onboard" class="card">
+      <h2>Welcome! Let's get started</h2>
+
+      <div class="onboard-grid">
+        <div class="col">
+          <label>Nickname
+            <input id="name" placeholder="Your name or nickname" />
+          </label>
+
+          <label>Birth year
+            <input id="birth" type="number" placeholder="Example: 2010" />
+          </label>
+
+          <label>Pick an avatar</label>
+          <div id="avatars" class="avatar-row"></div>
+        </div>
+
+        <div class="col">
+          <h3>Choose a career family</h3>
+          <div id="families" class="choices"></div>
+
+          <div class="buttons">
+            <button id="startBtn" class="btn primary">Start Exploring</button>
+            <button id="quickDemo" class="btn secondary">Quick demo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section id="game" class="hidden">
+      <div class="grid">
+        <!-- LEFT PANEL -->
+        <aside class="left card">
+          <div class="profile">
+            <div id="avatarLarge" class="avatarLarge">A</div>
+            <div>
+              <div id="profileName" class="profileName">Student</div>
+              <div id="profileMeta" class="muted">Born —</div>
+            </div>
+          </div>
+
+          <div class="skills card mini">
+            <h4>Skills</h4>
+            <div id="skills" class="skillsGrid"></div>
+          </div>
+
+          <div class="badges card mini">
+            <h4>Badges</h4>
+            <div id="badges" class="badgesGrid"></div>
+          </div>
+        </aside>
+
+        <!-- CENTER -->
+        <section class="center card">
+          <div class="mentor">
+            <div id="mentorAvatar" class="mentorAvatar">M</div>
+            <div>
+              <div id="mentorName" class="mentorName">Mentor</div>
+              <div id="mentorText" class="muted">Complete missions to grow skills.</div>
+            </div>
+          </div>
+
+          <div id="city" class="city card mini"></div>
+
+          <div class="missions card mini">
+            <h4>Available Missions</h4>
+            <div id="missionList"></div>
+          </div>
+        </section>
+
+        <!-- RIGHT PANEL -->
+        <aside class="right card">
+          <div class="readiness card mini">
+            <h4>Career Readiness</h4>
+            <div id="fitScore" class="fitScore">0%</div>
+            <div id="summary" class="muted">Do missions to see your fit score</div>
+
+            <div class="actions">
+              <button id="export" class="btn secondary">Download Profile</button>
+              <button id="reset" class="btn ghost">Reset</button>
+            </div>
+          </div>
+
+          <div class="reflect card mini">
+            <h4>Reflection</h4>
+            <textarea id="reflection" placeholder="What did you learn?"></textarea>
+            <button id="saveReflection" class="btn primary">Save Reflection</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>Local Resource: <code>/mnt/data/LDT Version 1.0.pdf</code></div>
+      <div>Hosted Free on GitHub Pages</div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal hidden">
+      <div class="modalCard">
+        <button id="closeModal" class="close">×</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
